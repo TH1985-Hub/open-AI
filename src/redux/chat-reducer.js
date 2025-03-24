@@ -1,4 +1,4 @@
-import {chatTypes} from "./chat-actions";
+import {chatTypes, clearApiKey} from "./chat-actions";
 
 const initialState = {
     input: "",
@@ -6,7 +6,7 @@ const initialState = {
     loading: false,
     showResult: false,
     resultData: "",
-
+    clearApiKey,
 } ;
 
 const chatReducer = (state = initialState, action) => {
@@ -21,6 +21,15 @@ const chatReducer = (state = initialState, action) => {
             ...state,
             apiKey: action.payload
             };
+
+
+case chatTypes.CLEAR_API_KEY:
+return {
+...state,
+  apiKey: "",
+  
+};
+
 
     case chatTypes.SET_SHOW_RESULT:
                 return {

@@ -5,8 +5,8 @@ import { Navigation } from "../layouts/navigation/navigation";
 
 
 import Settings  from "../pages/settings/index";
-import { Chat } from "../pages/chat";
-import { NotFoundPage } from "../pages/404";
+import { Chat } from "../pages/chat/index";
+import { NotFoundPage } from "../pages/404/index";
 
 export const routes = createBrowserRouter([
     {

@@ -102,6 +102,7 @@ export const SET_API_KEY = "SET_API_KEY";
 export const SET_LOADING = "SET_LOADING";
 export const SET_RESULT_DATA = "SET_RESULT_DATA";
 export const SET_SHOW_RESULT = "SET_SHOW_RESULT";
+export const CLEAR_API_KEY = "CLEAR_API_KEY";
 
 export const chatTypes = {
   SET_INPUT,
@@ -109,6 +110,7 @@ export const chatTypes = {
   SET_LOADING,
   SET_RESULT_DATA,
   SET_SHOW_RESULT,
+  CLEAR_API_KEY
 };
 
 export const setInput = (input) => ({
@@ -119,6 +121,10 @@ export const setInput = (input) => ({
 export const setApiKey = (apiKey) => ({
   type: chatTypes.SET_API_KEY,
   payload: apiKey,
+});
+
+export const clearApiKey = () => ({
+  type: chatTypes.CLEAR_API_KEY,  
 });
 
 export const setLoading = (loading) => ({
